@@ -58,8 +58,6 @@ public class Security {
 		} catch (SQLException e) {
 			ErrorLogger.log("Unable to retrieve user groups for current user");
 			ErrorLogger.log(e.getMessage());
-		}finally{
-			db.closeDbConnection();
 		}
 		return userGroups;
 	}

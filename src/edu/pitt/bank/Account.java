@@ -42,8 +42,6 @@ public class Account {
 		} catch (SQLException e) {
 			ErrorLogger.log("Unable to populate Account object");
 			ErrorLogger.log(e.getMessage());
-		}finally{
-			db.closeDbConnection();
 		}
 		String sqlQuery = "SELECT * FROM transaction "; 
 		sql += "WHERE accountID = '" + accountID + "'";
