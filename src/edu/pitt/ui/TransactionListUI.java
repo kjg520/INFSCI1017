@@ -63,6 +63,8 @@ public class TransactionListUI {
 		} catch (SQLException e1) {
 			ErrorLogger.log("Failed to retrieve Transaction List");
 			ErrorLogger.log(e1.getMessage());
+		}finally{
+			db.closeDbConnection();
 		}
 		
 		JButton btnClose = new JButton("Close");

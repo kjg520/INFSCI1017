@@ -45,6 +45,8 @@ public class Transaction {
 		} catch (SQLException e) {
 			ErrorLogger.log("Unable to populate transaction information from database");
 			ErrorLogger.log(e.getMessage());
+		}finally{
+			db.closeDbConnection();
 		}
 	}
 	/**

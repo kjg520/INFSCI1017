@@ -31,6 +31,8 @@ public class Security {
 		} catch (SQLException e) {
 			ErrorLogger.log("Unable to validate login information");
 			ErrorLogger.log(e.getMessage());
+		}finally{
+			db.closeDbConnection();
 		}
 		return cust;
 	}
@@ -56,6 +58,8 @@ public class Security {
 		} catch (SQLException e) {
 			ErrorLogger.log("Unable to retrieve user groups for current user");
 			ErrorLogger.log(e.getMessage());
+		}finally{
+			db.closeDbConnection();
 		}
 		return userGroups;
 	}

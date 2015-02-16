@@ -44,6 +44,8 @@ public class Customer {
 		} catch (SQLException e) {
 			ErrorLogger.log("Unable to populate Customer object");
 			ErrorLogger.log(e.getMessage());
+		}finally{
+			db.closeDbConnection();
 		}
 	}
 	/**
